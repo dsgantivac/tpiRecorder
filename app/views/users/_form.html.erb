@@ -17,23 +17,22 @@
   </div>
 
   <div class="field">
-    <%= form.label :lastname %>
+    <%= form.label "apellido" %>
     <%= form.text_field :lastname %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
+    <%= form.label "correo" %>
     <%= form.text_field :email %>
   </div>
 
   <div class="field">
-    <%= form.label :age %>
+    <%= form.label "Edad" %>
     <%= form.number_field :age %>
   </div>
 
   <div class="field">
-    <%= form.label :sex %>
-    <%= form.text_field :sex %>
+    <%= form.label "Sexo" %>
 
     <%= form.select(:sex) do %>
       <% [['Hombre', "H"], ['Mujer', "F"]].each do |c| -%>
@@ -43,12 +42,12 @@
   </div>
 
   <div class="field">
-    <%= form.label :weight %>
+    <%= form.label "Peso" %>
     <%= form.number_field :weight, :step => 0.1 %>
   </div>
 
   <div class="field">
-    <%= form.label :waist_perimeter %>
+    <%= form.label "Perímetro de la cintura" %>
     <%= form.number_field :waist_perimeter, :step => 0.1 %>
   </div>
 <!--
@@ -59,12 +58,12 @@
 -->
 
   <div class="field">
-    <%= form.label :height %>
+    <%= form.label "altura" %>
     <%= form.number_field :height , :step => 0.1%>
   </div>
 
   <div class="field">
-    <%= form.label :systole %>
+    <%= form.label "sistole" %>
     <%= form.number_field :systole, :step => 0.1 %>
   </div>
 
@@ -84,6 +83,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Enviar Datos' %>
   </div>
 <% end %>
