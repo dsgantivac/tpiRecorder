@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :nombre %>
     <%= form.text_field :name %>
   </div>
 
@@ -34,16 +34,22 @@
   <div class="field">
     <%= form.label :sex %>
     <%= form.text_field :sex %>
+
+    <%= form.select(:sex) do %>
+      <% [['Hombre', "H"], ['Mujer', "F"]].each do |c| -%>
+        <%= content_tag(:option, c.first, value: c.last) %>
+      <% end %>
+    <% end %>
   </div>
 
   <div class="field">
     <%= form.label :weight %>
-    <%= form.text_field :weight %>
+    <%= form.number_field :weight, :step => 0.1 %>
   </div>
 
   <div class="field">
     <%= form.label :waist_perimeter %>
-    <%= form.text_field :waist_perimeter %>
+    <%= form.number_field :waist_perimeter, :step => 0.1 %>
   </div>
 <!--
   <div class="field">
@@ -54,27 +60,27 @@
 
   <div class="field">
     <%= form.label :height %>
-    <%= form.text_field :height %>
+    <%= form.number_field :height , :step => 0.1%>
   </div>
 
   <div class="field">
     <%= form.label :systole %>
-    <%= form.text_field :systole %>
+    <%= form.number_field :systole, :step => 0.1 %>
   </div>
 
   <div class="field">
     <%= form.label :diastole %>
-    <%= form.text_field :diastole %>
+    <%= form.number_field :diastole, :step => 0.1 %>
   </div>
 
   <div class="field">
-    <%= form.label :heart_rate %>
-    <%= form.text_field :heart_rate %>
+    <%= form.label "ritmo cardiaco" %>
+    <%= form.number_field :heart_rate, :step => 0.1 %>
   </div>
 
   <div class="field">
     <%= form.label :spo2 %>
-    <%= form.text_field :spo2 %>
+    <%= form.number_field :spo2, :step => 0.5%>
   </div>
 
   <div class="actions">
