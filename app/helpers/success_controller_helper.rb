@@ -1,0 +1,2 @@
+module SuccessControllerHelper
+end
