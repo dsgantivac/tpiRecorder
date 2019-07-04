@@ -34,12 +34,26 @@
   <div class="field">
     <%= form.label "Sexo" %>
 
+    Hombre: <%= form.radio_button :sex, "hombre" %>
+    Mujer: <%= form.radio_button :sex, "mujer" %>
+
+
+<!--
+    <% sexs = ['Hombre', 'Mujer'] %>
+    <%  sexs.each do |day| %>
+      <%= day%>
+      <%= form.check_box :sex, {:value => "hombre" }, day %>
+      
+    <%end%>
+-->
+<!--
     <%= form.select(:sex) do %>
       <% [['Hombre', "H"], ['Mujer', "F"]].each do |c| -%>
         <%= content_tag(:option, c.first, value: c.last) %>
       <% end %>
     <% end %>
   </div>
+-->
 
   <div class="field">
     <%= form.label "Peso" %>
